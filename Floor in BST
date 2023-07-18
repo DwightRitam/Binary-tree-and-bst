@@ -1,0 +1,17 @@
+int ans=-1;
+    while(root){
+        if(root->data==input){
+            ans=root->data;
+            return ans;
+        }
+        if(root->data<input){
+            ans=root->data;
+            root=root->right;
+        }
+        //take as much as it can get small,so we are storing it
+        else{
+            
+            root=root->left;
+        }
+    }
+        return ans;
